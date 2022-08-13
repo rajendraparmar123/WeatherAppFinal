@@ -47,7 +47,7 @@ const getInfo=  async(event)=>{
 
         }
         catch(err){
-            city_name.innerText=err.name;
+            city_name.innerText=err;
             datahide.classList.add('data_hide');
         }
     }
