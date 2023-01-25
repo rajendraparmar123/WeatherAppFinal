@@ -28,22 +28,21 @@ const getInfo=  async(event)=>{
 
             const tempMood = arrData[0].weather[0].main;
             //condition to check sunny or cloudy
-            if (tempMood == "Clear") {
-                temp_status.innerHTML =
-                    "<i class='fas  fa-sun' style='color: #eccc68;'></i>";
-                } else if (tempMood == "Clouds") {
+           if (tempMood == "Clear") {
                 temp_status.innerHTML =
                     "<i class='fas  fa-cloud' style='color: #f1f2f6;'></i>";
+                } else if (tempMood == "Clouds") {
+                temp_status.innerHTML =
+                    "<i class='fas  fa-cloud-meatball' style='color: #f1f2f6;'></i>";
                 } else if (tempMood == "Rain") {
                 temp_status.innerHTML =
-                    "<i class='fas  fa-cloud-rain' style='color: #a4b0be;'></i>";
+                    "<i class='fas  fa-cloud-showers-heavy' style='color: #a4b0be;'></i>";
                 } else {
                 temp_status.innerHTML =
-                    "<i class='fas  fa-sun' style='color:#eccc68;'></i>";
+                    "<i class='fas  fa-wind' style='color: #f1f2f6;'></i>";
                 }
-
+                 
                 datahide.classList.remove('data_hide');
-
 
         }
         catch(err){
